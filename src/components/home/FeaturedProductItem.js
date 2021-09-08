@@ -33,7 +33,7 @@ const FeaturedProductItem = ({
       }),
     [theme],
   );
-
+      console.log('imageURI', imageURI )
   return (
     <View style={styles.container(theme)}>
       <TouchableOpacity
@@ -42,8 +42,9 @@ const FeaturedProductItem = ({
           onPress(product);
         }}>
         <FastImage
-          style={themeStyles.image}
-          resizeMode="contain"
+          // style={[themeStyles.image, {backgroundColor: 'yellow'}]}
+          style={{width: 50, height: 70, backgroundColor: 'yellow'}}
+          resizeMode="cover"
           source={{ uri: imageURI }}
         />
         <View style={styles.infoStyle}>
